@@ -1,0 +1,19 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>MMDb</span>
+    <span class="example-spacer"></span>
+    <input type="text"  class="w-25"  [(ngModel)]="searchMovies"/>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</p>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-3 my-3 " *ngFor="let movie of allMovies | filter:searchMovies" (click)="movieDetails(movie)">
+      <img [src]="movie?.poster_path" [alt]="movie?.title" width="200" />
+      <br />
+      <p class="text-left">
+        <strong>{{ movie.title }} ({{ movie.vote_average }}) </strong>
+      </p>
+    </div>
+  </div>
+</div>

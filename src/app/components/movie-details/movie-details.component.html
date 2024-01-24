@@ -1,0 +1,31 @@
+<section class="container">
+  <div class="row">
+    <div class="col-6 text-center">
+      <img height="600" [src]="movie?.poster_path" [alt]="movie?.title" />
+    </div>
+    <div class="col-6">
+      <h1>
+        <strong>
+          {{ movie?.title }}
+        </strong>
+      </h1>
+      <p>
+        {{ movie?.status }} &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;| &nbsp;&nbsp;&nbsp;
+        &nbsp; &nbsp; {{ movie?.runtime }}m &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;|
+        &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+        {{ movie?.vote_average }}
+      </p>
+      <p>
+        {{ movie?.overview }}
+      </p>
+      <b>Other Details:</b>
+      <br />
+      <b>Language:</b>
+      <p>{{ movie?.original_language }}</p>
+      <b>Budget:</b>
+      <p>${{ movie?.budget }}</p>
+      <b>Revenue:</b>
+      <p>${{ movie?.revenue }}</p>
+    </div>
+  </div>
+</section>
